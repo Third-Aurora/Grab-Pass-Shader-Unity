@@ -397,7 +397,7 @@ Transform:
   m_GameObject: {fileID: 1323798172}
   m_LocalRotation: {x: -0.3987491, y: 0, z: 0, w: 0.91706014}
   m_LocalPosition: {x: 0, y: -129.8, z: 158.3}
-  m_LocalScale: {x: 250, y: 250, z: 250}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1869828217}
   m_Father: {fileID: 0}
@@ -547,8 +547,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1869828216}
   m_LocalRotation: {x: 0.70710677, y: -0, z: -0, w: 0.70710677}
-  m_LocalPosition: {x: 0, y: 0, z: 0.032999985}
-  m_LocalScale: {x: 0.29999998, y: 0.30000004, z: 0.30000004}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 1323798174}
   m_RootOrder: 0
@@ -612,8 +612,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52658be7978a04fb29145d7fc4cdbf54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!65 &1869828221
-BoxCollider:
+  SwirlAmount: 100
+--- !u!64 &1869828221
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -622,6 +623,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.9999999, z: 0.000000059604645}
-  m_Center: {x: 0, y: -0.00000023841858, z: 0}
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
