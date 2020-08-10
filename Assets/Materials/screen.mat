@@ -37,6 +37,14 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - Texture2D_A9267517:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_F9D06C58:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - Texture2D_FD11A6DE:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -78,12 +86,17 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_1500C992: 1
-    - Vector1_48E2F3AC: 0
+    - Vector1_1500C992: 2
+    - Vector1_30B7143C: 1
+    - Vector1_48E2F3AC: 0.05
     - Vector1_4C2FFE2E: 0
-    - Vector1_54A3261: 0.1
+    - Vector1_54A3261: 3
+    - Vector1_6FE8F294: 0.3
+    - Vector1_91BD6C57: 8.94
     - Vector1_978E95A2: 0
-    - Vector1_E5889A74: 0.1
+    - Vector1_9CC5CA7D: 0.05
+    - Vector1_E5889A74: 4
+    - Vector1_E639552F: 1
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -106,11 +119,13 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
+    - Color_A39F057F: {r: 0, g: 0.4457605, b: 1, a: 1}
     - Vector2_4D6AEFCC: {r: 0, g: 0.01, b: 0, a: 0}
     - Vector2_8115C8F4: {r: 0, g: 1, b: 0, a: 0}
-    - Vector2_994A5207: {r: 0, g: -528.9, b: 0, a: 0}
-    - Vector2_D3B64376: {r: 0, g: 45340, b: 0, a: 0}
+    - Vector2_994A5207: {r: 0, g: -0.05, b: 0, a: 0}
+    - Vector2_D3B64376: {r: 0, g: 0, b: 0, a: 0}
     - Vector2_D82F44D3: {r: 0, g: 1, b: 0, a: 0}
+    - Vector2_EB3264FD: {r: 0, g: 1, b: 0, a: 0}
     - _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
