@@ -2,13 +2,18 @@
 
 public class CutHole : MonoBehaviour {
 
+    public float SwirlAmount = 100f;
+    public float StartSpeed = .5f;
+    public float EndSpeed = 3f;
+
     Renderer imageRend;
 
     float desiredStrength;
+    Camera mainCam;
     float SwirlSpeed = .5f;
-    float SwirlAmount = 100f;
 
     void Start() {
+        mainCam = Camera.main;
         imageRend = GetComponent<Renderer>();
     }
 
@@ -25,7 +30,7 @@ public class CutHole : MonoBehaviour {
         desiredStrength = SwirlAmount;
         SetSwirlStrength(SwirlAmount);
         PositionSwirlToTouch();
-        SwirlSpeed = .5f;
+        SwirlSpeed = StartSpeed;
     }
 
     public void OnMouseDrag() {
@@ -33,12 +38,12 @@ public class CutHole : MonoBehaviour {
     }
 
     public void OnMouseUp() {
-        SwirlSpeed = 3f;
+        SwirlSpeed = EndSpeed;
         PositionSwirlToTouch();
     }
 
     void PositionSwirlToTouch() {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Ray ray = mainCam.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out RaycastHit hit)) {
             //convert hit from world to localspace
             Vector3 objectPos = transform.InverseTransformPoint(hit.point);
@@ -48,9 +53,5 @@ public class CutHole : MonoBehaviour {
             shaderPos.y = objectPos.y + .5f;
             imageRend.material.SetVector("_SwirlCenter", shaderPos);
         }
-    }
-
-    public static float Remap(float value, float from1, float to1, float from2, float to2) {
-        return (value - from1) / (to1 - from1) * (to2 - from2) + from2;
     }
 }
